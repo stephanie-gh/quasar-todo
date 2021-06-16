@@ -34,7 +34,9 @@
           />
         </q-item-section>
         <q-item-section>
-          <q-item-label v-text="task.title"></q-item-label>
+          <q-item-label
+            v-text="task.title"
+          />
         </q-item-section>
         <q-item-section v-if="task.done" side>
           <q-btn
@@ -44,8 +46,7 @@
             dense
             color="primary"
             icon="delete"
-          >
-          </q-btn>
+          />
         </q-item-section>
         <q-item-section v-model="task.title" side>
           <q-btn
@@ -73,9 +74,9 @@
         </q-item-section>
       </q-item>
     </q-list>
-    <div v-if="!tasks.length" class="no-task absolute-center">
+    <div v-if="!tasks.length" class="no-task absolute-center text-center">
       <q-icon name="check" size="100px" color="primary" />
-      <div class="text-h5 text-primary text-center">
+      <div class="text-h5 text-primary">
         No tasks at all
       </div>
     </div>
